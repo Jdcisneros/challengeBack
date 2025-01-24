@@ -153,7 +153,7 @@ it("should delete a todo", async () => {
 
   const response = await request(app)
     .delete(`/api/todos/${todoId}`)
-    .set("Authorization", `Bearer ${token}`);
+    .set("Authorization", `Bearer ${token}`)
 
   expect(response.status).toBe(200);
   expect(response.body.message).toBe("Todo deleted");
