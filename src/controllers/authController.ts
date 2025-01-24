@@ -13,9 +13,9 @@ export const register = async (req: Request, res: Response) => {
   try {
     const { username, email, password } = req.body;
 
-    const lowerCaseEmail = email.toLowerCase()
+   
 
-    const existingUser = await User.findOne({ where: { email:lowerCaseEmail } });
+    const existingUser = await User.findOne({ where: { email } });
     if (existingUser) {
       res.status(400).json({ message: 'User already exists' });
       return 
@@ -35,8 +35,9 @@ export const register = async (req: Request, res: Response) => {
 export const login = async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body;
+    const lowerCaseEmail = email.toLowerCase()
 
-    const user = await User.findOne({ where: { email } });
+    const user = await User.findOne({ where: { email:lowerCaseEmail } });
     if (!user) {
       res.status(404).json({ message: 'User not found' });
       return 
