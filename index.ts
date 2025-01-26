@@ -30,7 +30,7 @@ const swaggerOptions = {
       },
     ],
   },
-  apis: ["./controllers/todoController.js"], 
+  apis: ["./src/controllers/todoController.js"], 
 };
 
 
