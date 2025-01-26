@@ -26,7 +26,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: "https://challengeback-production-5b58.up.railway.app/",
+        url: "https://challengeback-production-5b58.up.railway.app",
       },
     ],
   },
