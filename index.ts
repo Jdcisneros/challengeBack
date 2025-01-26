@@ -8,7 +8,7 @@ import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUi from 'swagger-ui-express';
 dotenv.config();
 
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 
@@ -26,7 +26,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: "https://challengeback-production-5b58.up.railway.app",
+        url: "https://challengeback-production-5b58.up.railway.app/",
       },
     ],
   },
